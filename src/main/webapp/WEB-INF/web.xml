@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+	<display-name>nytins webapp</display-name>
+	
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>com.nytins.web.DispatcherServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/pages/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>message-capture</servlet-name>
+		<servlet-class>com.nytins.web.MessageCapture</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>message-capture</servlet-name>
+		<url-pattern>/message-capture</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
