@@ -23,7 +23,7 @@
 						<!-- Logo -->
 							<div id="logo">
 								<h1><a href="/pages/home">nytins</a></h1>
-								<span>.com</span>
+								<span>playground</span>
 							</div>
 
 						<!-- Nav -->
