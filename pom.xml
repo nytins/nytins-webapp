@@ -11,7 +11,9 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<scp.dirCopyTo>/var/lib/tomcat8/webapps</scp.dirCopyTo>
+ 		<scp.dirCopyTo>/var/lib/tomcat8/webapps</scp.dirCopyTo>
+<!-- 		<scp.dirCopyTo>/Users/nithin/Downloads</scp.dirCopyTo>
+-->
 	</properties>
 
 	<dependencies>
@@ -38,7 +40,7 @@
 						<configuration>
 							<tasks>
 								<echo
-									message="Command -------- ${scp.dirCopyTo}" />
+									message="Command -------- ${project.basedir}   -- ${scp.dirCopyTo}" />
 								<copy file="target/ROOT.war" todir="${scp.dirCopyTo}"/>
 							</tasks>
 						</configuration>
