@@ -11,9 +11,7 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
- 		<scp.dirCopyTo>/var/lib/tomcat8/webapps</scp.dirCopyTo>
-<!-- 		<scp.dirCopyTo>/Users/nithin/Downloads</scp.dirCopyTo>
--->
+		<scp.dirCopyTo>/var/lib/tomcat8/webapps</scp.dirCopyTo>
 	</properties>
 
 	<dependencies>
@@ -30,26 +28,6 @@
 	<build>
 		<finalName>ROOT</finalName>
 		<plugins>
-
-			<plugin>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.8</version>
-				<executions>
-					<execution>
-						<phase>install</phase>
-						<configuration>
-							<tasks>
-								<echo
-									message="Command -------- ${project.basedir}   -- ${scp.dirCopyTo}" />
-								<copy file="target/ROOT.war" todir="${scp.dirCopyTo}"/>
-							</tasks>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
@@ -69,4 +47,37 @@
 
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>copy-to-webapps</id>
+			<build>
+				<finalName>ROOT</finalName>
+				<plugins>
+
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.8</version>
+						<executions>
+							<execution>
+								<phase>install</phase>
+								<configuration>
+									<tasks>
+										<echo message="Project base dir: ${project.basedir}" />
+										<copy file="target/ROOT.war" todir="${scp.dirCopyTo}" />
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+
+				</plugins>
+			</build>
+
+		</profile>
+	</profiles>
+
 </project>
