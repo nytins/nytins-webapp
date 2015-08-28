@@ -9,6 +9,26 @@
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>com.nytins.web.DispatcherServlet</servlet-class>
+		
+		<init-param>
+			<param-name>/pages/left</param-name>
+			<param-value>/left-sidebar.html</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>/pages/right</param-name>
+			<param-value>/right-sidebar.html</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>/pages/contact-me</param-name>
+			<param-value>/contact-me.jsp</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>/pages/home</param-name>
+			<param-value>/index.html</param-value>
+		</init-param>
 	</servlet>
 	
 	<servlet-mapping>
