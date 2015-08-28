@@ -31,20 +31,10 @@
 								<ul>
 									<li><a href="/pages/home">Welcome</a></li>
 									<li>
-										<a href="#">Dropdown</a>
+										<a href="#">Links</a>
 										<ul>
-											<li><a href="#">Lorem ipsum dolor</a></li>
-											<li><a href="#">Magna phasellus</a></li>
-											<li>
-												<a href="#">Phasellus consequat</a>
-												<ul>
-													<li><a href="#">Lorem ipsum dolor</a></li>
-													<li><a href="#">Phasellus consequat</a></li>
-													<li><a href="#">Magna phasellus</a></li>
-													<li><a href="#">Etiam dolore nisl</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Veroeros feugiat</a></li>
+											<li><a href="https://github.com/nytins/nytins-webapp">Source Code</a></li>
+											<li><a href="http://nytins.com:8080/job/nytins-webapp">Continuous Integration</a></li>
 										</ul>
 									</li>
 									<li><a href="/pages/left">Left Sidebar</a></li>
