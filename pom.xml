@@ -7,7 +7,7 @@
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>nytins-webapp Maven Webapp</name>
+	<name>nytins Webapp</name>
 	<url>http://nytins.com</url>
 
 	<dependencies>
@@ -22,7 +22,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>ROOT</finalName>
+		<finalName>${project.artifactId}</finalName>
 		<plugins>
 
 			<plugin>
@@ -34,12 +34,6 @@
 					<server>TomcatServer</server>
 					<path>/</path>
 				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.3.2.v20150730</version>
 			</plugin>
 
 			<plugin>
