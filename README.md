@@ -3,7 +3,13 @@
 
 nytins.com webapp.
 
+##Installing
+```
+mvn clean install
+```
+
 ##Running it locally
 ```
 mvn tomcat7:run
 ```
+
